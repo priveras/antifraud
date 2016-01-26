@@ -1,0 +1,18 @@
+{% extends "data/base.html" %}
+{% block content %}
+<table border="1">
+		{% for payment in payments_list %}
+			<tr>
+				<td>
+					{{payment.charge_id}}
+				</td>
+				<td>
+					{{payment.amount}}
+				</td>
+				<td>
+					{{payment.status}}
+				</td>
+			</tr>
+		{% endfor %}
+</table>
+{% endblock %}
